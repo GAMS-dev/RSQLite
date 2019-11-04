@@ -1,6 +1,6 @@
 Package: RSQLite
-Title: 'SQLite' Interface for R
-Version: 2.1.2
+Title: 'SQLite' Interface for R (removed GPL-2 licensed bit64 dependency for MIRO)
+Version: 2.1.2.9999
 Date: 2019-07-23
 Authors@R: c(
     person("Kirill", "M\u00fcller", role = c("aut", "cre"), email = "krlmlr+r@mailbox.org", comment = c(ORCID = "0000-0002-1416-3412")),
@@ -10,7 +10,8 @@ Authors@R: c(
     person(family = "SQLite Authors", role = "ctb", comment = "for the included SQLite sources"),
     person("Liam", "Healy", role = "ctb", comment = "for the included SQLite sources"),
     person(family = "R Consortium", role = "fnd"),
-    person(family = "RStudio", role = "cph")
+    person(family = "RStudio", role = "cph"),
+    person("Frederik", "Proske", email = "fproske@gams.com", role = "ctb")
     )
 Description: Embeds the 'SQLite' database engine in R and
     provides an interface compliant with the 'DBI' package. The
@@ -21,7 +22,6 @@ BugReports: https://github.com/r-dbi/RSQLite/issues
 Depends: 
     R (>= 3.1.0)
 Imports: 
-    bit64,
     blob (>= 1.2.0),
     DBI (>= 1.0.0),
     memoise,

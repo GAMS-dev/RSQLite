@@ -1,3 +1,32 @@
+# RSQLite 2.2.0.9000
+
+- Same as previous version.
+
+
+# RSQLite 2.2.0
+
+- Avoid mangling column names (#259).
+
+
+# RSQLite 2.1.5
+
+- Upgrade bundled sqlite version to 3.30.1.
+- Implement `dbGetInfo()` for driver and connection objects (#117).
+- Remove custom `dbListFields()` method (#228).
+- Only export relevant symbols to the shared library (#303, @troels).
+- Fulfill requirements for CII badge (#300, @TSchiefer).
+
+
+# RSQLite 2.1.4
+
+- Replace `std::mem_fn()` by `boost::mem_fn()` which works for older compilers.
+
+
+# RSQLite 2.1.3
+
+- Replace `std::mem_fun_ref()` by `std::mem_fn()`.
+
+
 # RSQLite 2.1.2
 
 ## Bundled library
@@ -23,6 +52,8 @@
 - Error messages are encoded in UTF-8.
 
 - Column names are marked as UTF-8 on return, to fix encoding problems on Windows (#276, @shrektan).
+
+- Fix segmentation fault when an open connection is garbage-collected with `options(warn = 2)` (#245).
 
 
 ## New features
